@@ -1,6 +1,8 @@
 Photogur::Application.routes.draw do
   # resources :pictures # to get the 7 methods automatically
 
+  root :to => "pictures#index"
+
   get 'pictures' => 'pictures#index'
 
   post 'pictures' => "pictures#create"
