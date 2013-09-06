@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130906011946) do
 
   create_table "pictures", :force => true do |t|
-    t.string   "artest"
+    t.string   "artist"
     t.string   "title"
     t.string   "url"
     t.datetime "created_at", :null => false
