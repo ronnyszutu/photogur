@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Photogur</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Photogur</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	
+	<body>
+		<div id="header-area">
+			<h1>Photogur Application</h1>
+		</div>
 
-<%= @pictures.inspect %>
-<%= yield %>
+		<div id="content-area">
+			<div id="nav">
+				<ul id="left-nav">
+					<li><%= link_to "Home", pictures_url %></li>
+				</ul>
+				<ul id="right-nav">
+					<li><%= link_to "New Picture", "/pictures/new" %></li>
+				</ul>
+			</div>
+		<!-- <%= @pictures.inspect %> -->
 
-</body>
+		<div id="content-container">
+			<%= yield %>
+		</div>
+
+		</div>
+	</body>
 </html>
